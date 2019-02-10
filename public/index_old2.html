@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WebAssembly Demo</title>
+  </head>
+  <body>
+    <h1>WebAssembly Demo</h1>
+    <script src="strings.js"></script>
+    <script>
+
+        // Wasm dosyası yüklenmedi hatasını almamak için
+        Module['onRuntimeInitialized'] = () => {
+            console.log( _getStr() );
+        }
+
+    </script>
+  </body>
+</html>
